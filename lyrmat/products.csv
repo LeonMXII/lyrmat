@@ -1,0 +1,4 @@
+name,description,category,manufacturer,price,is_lte_enabled,release_date
+PlayStation 5,Игровая консоль нового поколения,Консоли,Sony,599.99,False,2020-11-12
+Gaming PC X,Мощный игровой ПК,ПК,ASUS,1299.99,True,2023-05-01
+PlayStation 4,Предыдущее поколение консоли,Консоли,Sony,299.99,False,2013-11-15
