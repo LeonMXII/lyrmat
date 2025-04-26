@@ -6,12 +6,20 @@ class Manufacturer(models.Model):
     name = models.CharField(max_length=100)
     country = models.CharField(max_length=50, blank=True, null=True)
 
+    class Meta:
+        verbose_name = "Производители"
+        verbose_name_plural = "Производители"
+
     def __str__(self):
         return self.name
 
 # Категория товара
 class Category(models.Model):
     name = models.CharField(max_length=50, unique=True)
+
+    class Meta:
+        verbose_name = "Категории"
+        verbose_name_plural = "Категории"
 
     def __str__(self):
         return self.name
@@ -27,6 +35,10 @@ class Product(models.Model):
     is_lte_enabled = models.BooleanField(default=False)
     release_date = models.DateField()
 
+    class Meta:
+        verbose_name = "Товары"
+        verbose_name_plural = "Товары"
+
     def __str__(self):
         return self.name
 
@@ -36,6 +48,9 @@ class Customer(models.Model):
     email = models.EmailField()
     name = models.CharField(max_length=100)
 
+    class Meta:
+        verbose_name = "Клиенты"
+        verbose_name_plural = "Клиенты"
     def __str__(self):
         return self.name
 
@@ -50,6 +65,10 @@ class Order(models.Model):
     city = models.CharField(max_length=100, blank=True, null=True)
     postal_code = models.CharField(max_length=20, blank=True, null=True)
 
+    class Meta:
+        verbose_name = "Заказы"
+        verbose_name_plural = "Заказы"
+
     def __str__(self):
         return f"Order #{self.pk} - {self.customer.name}"
 
@@ -59,5 +78,8 @@ class OrderItem(models.Model):
     product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
     quantity = models.PositiveIntegerField(default=1)
 
+    class Meta:
+        verbose_name = "Позиции"
+        verbose_name_plural = "Позиции"
     def __str__(self):
         return f"{self.quantity} x {self.product.name}"

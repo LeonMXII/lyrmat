@@ -1,4 +1,7 @@
 name,description,category,manufacturer,price,is_lte_enabled,release_date
-PlayStation 5,Игровая консоль нового поколения,Консоли,Sony,599.99,False,2020-11-12
+PlayStation 5,Игровая консоль нового поколения,Консоль,Sony,599.99,False,2020-11-12
 Gaming PC X,Мощный игровой ПК,ПК,ASUS,1299.99,True,2023-05-01
-PlayStation 4,Предыдущее поколение консоли,Консоли,Sony,299.99,False,2013-11-15
+PlayStation 4,Предыдущее поколение консоли,Консоль,Sony,299.99,False,2013-11-15
+"PlayStation 5 Pro","Играйте в игры PS5 с самой впечатляющей графикой, когда-либо возможной на консоли PlayStation","Консоль","Sony",899.99,False,2024-11-07
+"Fragmachine FIRE 9101","AMD Ryzen 9 7950X3D, 16 x 4.2 ГГц, 64 ГБ DDR5, GeForce RTX 4090, SSD 2000 ГБ","ПК","Acer",8113.26,True,2024-12-12
+
