@@ -1,4 +1,5 @@
 from django.urls import path, include
+from .permissions import IsSupplierUser
 from rest_framework.routers import DefaultRouter
 from .views import (
     ManufacturerViewSet,
@@ -9,7 +10,8 @@ from .views import (
     OrderItemViewSet,
     RegisterView,
     CustomAuthToken, AddToCartView, RemoveFromCartView, ConfirmOrderView, AddShippingAddressView,
-    RemoveShippingAddressView, UpdateOrderStatusView
+    RemoveShippingAddressView, UpdateOrderStatusView, SupplierOrderViewSet, ProductAttributeViewSet,
+    ProductAttributeValueViewSet, SupplierInvoiceViewSet
 )
 
 router = DefaultRouter()
@@ -19,6 +21,12 @@ router.register(r'products', ProductViewSet)
 router.register(r'customers', CustomerViewSet)
 router.register(r'orders', OrderViewSet)
 router.register(r'order-items', OrderItemViewSet)
+router.register(r'supplier-orders', SupplierOrderViewSet, basename='supplier-orders')
+router.register(r'attributes', ProductAttributeViewSet)
+router.register(r'attribute-values', ProductAttributeValueViewSet)
+router.register(r'invoices', SupplierInvoiceViewSet, basename='supplierinvoice')
+
+
 
 urlpatterns = [
     path('', include(router.urls)),

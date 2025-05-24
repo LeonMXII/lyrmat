@@ -41,3 +41,7 @@ python manage.py load_data products.csv
 
 python manage.py runserver
 
+### 7. Создайте заказ перед загрузкой накладных
+
+python manage.py load_invoices invoice.csv
+
